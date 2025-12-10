@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pothole Detection - Phone Camera</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Pothole Detection</h1>
+    <p class="hint">
+      Allow camera access in your browser. The top preview is your raw camera feed,
+      the bottom image shows YOLO detections from your laptop.
+    </p>
+
+    <div class="video-row">
+      <div class="panel">
+        <h2>Camera preview</h2>
+        <video id="video" autoplay playsinline muted></video>
+      </div>
+      <div class="panel">
+        <h2>YOLO output</h2>
+        <img id="result" alt="YOLO result will appear here" />
+      </div>
+    </div>
+
+    <div class="status">
+      <span id="status">Status: Waiting for camera...</span>
+    </div>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
